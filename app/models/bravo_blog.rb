@@ -1,0 +1,2 @@
+class BravoBlog < ApplicationRecord
+end

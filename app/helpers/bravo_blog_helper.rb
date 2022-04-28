@@ -1,0 +1,2 @@
+module BravoBlogHelper
+end
