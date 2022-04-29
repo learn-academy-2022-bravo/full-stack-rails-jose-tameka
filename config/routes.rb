@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  get 'index' => 'bravo_blog#index'
+  # root 'bravo_blog#index'
+  get 'bravo_blogs' => 'bravo_blog#index', as: 'entries'
+  get 'bravo_blogs/new' => 'bravo_blog#new', as: 'new_entry'
+  get 'bravo_blogs/:id' => 'bravo_blog#show', as: 'entry'
+  post 'bravo_blogs' => 'bravo_blog#create'
+
 end

@@ -2,10 +2,12 @@
 
 <ul>
 
-<% @all_blogs.map do |value| %>
-    <li><%= @all_blogs %></li>
+<% @bravo_blogs.each do |input| %>
+    <li><%= link_to input.title, entry_path(input) %></li>
     <p>
 <% end %>
 
 
 </ul>
+
+<%= link_to 'Add Entry', new_entry_path %>
